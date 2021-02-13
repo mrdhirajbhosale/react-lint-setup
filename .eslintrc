@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "standard-react",
+    "eslint:recommended",
+    "react-app",
+    "plugin:@typescript-eslint/eslint-recommended"
+  ],
+  "plugins":[
+    "react-hooks"
+  ],
+
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "indent": ["error", 2],
+    "space-before-function-paren": 0,
+    "react/prop-types": 0,
+    "react/jsx-handler-names": 0,
+    "react/jsx-fragments": 0,
+    "react/no-unused-prop-types": 0,
+    "import/export": 0,
+    "dot-notation": 2,
+    "quotes": ["error", "single"]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_",
+            "argsIgnorePattern": "^_"
+          }
+        ]
+      }
+    }
+  ]
+
+}
